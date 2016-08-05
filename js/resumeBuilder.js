@@ -238,7 +238,11 @@ projects.display = function() {
             if (projects.projects[project].images.length) {
                 for (var image in projects.projects[project].images) {
                     if (projects.projects[project].images.hasOwnProperty(image)) {
-                        var formattedImage = getNewString(HTMLprojectImage, projects.projects[project].images[image]);
+                        var completeHTMLprojectImage = HTMLprojectImage;
+                            if (projects.projects[project].url.length) {
+                                completeHTMLprojectImage = HTMLprojectImage.replace("#", projects.projects[project].url);
+                            }
+                        var formattedImage = getNewString(completeHTMLprojectImage, projects.projects[project].images[image]);
                         $(".project-entry:last").append(formattedImage);
                     }
                 }
