@@ -23,7 +23,7 @@ var bio = {
 var education = {
     "schools": [{
         "name": "Udacity",
-        "location": "",
+        "location": "Berlin, Germany",
         "degree": "Machine Learning Engineer Nanodegree",
         "majors": ["Machine Learning"],
         "dates": "2016 (in progress)",
